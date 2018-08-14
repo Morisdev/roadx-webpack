@@ -8,7 +8,7 @@ From basic usage to deep understanding, every step will be logged here.
 ## Task
 ### 201808
 #### Official Guide 
-+ Output
++ ~~Output~~
 + Asset
 + Dev
 + HMR
