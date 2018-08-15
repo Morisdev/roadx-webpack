@@ -10,15 +10,13 @@ From basic usage to deep understanding, every step will be logged here.
 #### Official Guide 
 + ~~Output~~
 + Asset
-+ Dev
++ ~~Dev~~
 + HMR
 + Tree Shaking
 + Production
 + Code Splitting
 + Lazy Loading
 + Caching 
-
-
 
 ## References
 + [webpack.js.org](https://webpack.js.org/)
