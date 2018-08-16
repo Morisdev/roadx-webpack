@@ -12,8 +12,8 @@ From basic usage to deep understanding, every step will be logged here.
 + Asset
 + ~~Dev~~
 + HMR
-+ Tree Shaking
-+ Production
++ ~~Tree Shaking~~
++ ~~Production~~
 + Code Splitting
 + Lazy Loading
 + Caching 
