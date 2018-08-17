@@ -1,6 +1,7 @@
 // entry
 
 import { cube } from './util';
+import { print } from './print';
 
 const app = () => {
     let el = document.createElement('div');
@@ -9,3 +10,10 @@ const app = () => {
 }
 
 document.body.appendChild(app());
+
+if (module.hot) {
+    module.hot.accept('./print.js', function() {
+        console.log('updated from HMR');
+        print();
+    });
+}
