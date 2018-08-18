@@ -14,7 +14,8 @@ From basic usage to deep understanding, every step will be logged here.
 + ~~HMR~~
 + ~~Tree Shaking~~
 + ~~Production~~
-+ Code Splitting
++ ~~Code Splitting~~
++ Build Performance
 + Lazy Loading
 + Caching 
 

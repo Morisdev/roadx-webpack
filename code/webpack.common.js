@@ -22,4 +22,9 @@ module.exports = {
             title : 'Page Title'
         })
     ]
+    // optimization :{
+    //     splitChunks : {
+    //         chunks : 'all'
+    //     }
+    // }
 }
