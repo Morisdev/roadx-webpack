@@ -2,6 +2,7 @@
 
 import { cube } from './util';
 import { print } from './print';
+import './style.css';
 
 const app = () => {
     let el = document.createElement('div');

@@ -41,6 +41,27 @@ if (module.hot) {
 }
 ```
 
+## 使用HMR调试样式
+在``style-loader``插件的帮助下，使用HMR调试样式非常简便。因为``style-loader``插件内置了``module.hot.accept``的逻辑，一旦依赖的css文件发生了改变，那么修改的样式就会作为补丁被添加到``<style>``标签中，实现热更新。
+```
+// command
+npm install --save-dev style-loader css-loader
+
+// webpack.config.js
+module : {
+    rules : [
+        {
+            test : /\.css$/,
+            use : ['style-loader', 'css-loader']
+        }
+    ]
+}
+
+// (entry) index.js
+import './style.css';
+```
+
+
 
 
 

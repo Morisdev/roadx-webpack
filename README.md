@@ -11,7 +11,7 @@ From basic usage to deep understanding, every step will be logged here.
 + ~~Output~~
 + Asset
 + ~~Dev~~
-+ HMR
++ ~~HMR~~
 + ~~Tree Shaking~~
 + ~~Production~~
 + Code Splitting
