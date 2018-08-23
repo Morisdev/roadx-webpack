@@ -18,5 +18,27 @@ module : {
 通过以上配置，便可以在js中以``import``的语法引入css模块了。被引入的css模块中的代码会被格式化后放进html的style标签里。   
 **Note** : 在生产模式下应尽量减少css文件的容量，从而缩短加载时间。可以使用``postcss-loader``等插件来提高性能。
 
+## Images
+在应用中引入图片文件（如background-image、icons），需要安装``file-loader``，然后配置loader规则。
+```
+// webpack.config.js
+module : {
+    rules : [
+        {
+            test : /\.(png|jpeg|jpg|gif)$/,
+            use : ['file-loader']
+        }
+    ]
+}
+```
+经过上述配置后，便可在应用中引用图片。
+```
+// index.js
+import BadgeImage from './images/bvb.jpeg';
+
+let img = new Image();
+img.src = BadgeImage; // Image URL
+document.body.appendChild(img);
+```
 
 
