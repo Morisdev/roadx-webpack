@@ -73,6 +73,22 @@ webpack-dev-server提供了一个简洁的web服务器，能够在开发过程�
 ```
 执行``npm run dev``，浏览器会自动弹出，并访问localhost:5566。每次修改源文件，webpack都会重新编译，浏览器也会自动刷新。
 
+#### 补充
+1. webpack-dev-server是跑在内存中的，即生成的bundle内容不会输出到文件，而只会存储在内存中。
+如果因为某些原因，想要生成文件，可以通过[write-file-webpack-plugin](https://github.com/gajus/write-file-webpack-plugin)来实现。
+2. 如果默认端口被占用，WDS会尝试使用其他端口。执行``netstat -an | grep 8080``查看端口是否被占用。
+3. SPA应用，如果想要通过HTML5 History API实现前端路由，需要设置``devServer.historyApiFallback``为``true``。否则会出现404错误，因为如果不支持History Api，在访问某个路由/xx/xx时，webpack会把它当做后端路由去请求服务器。
+4. 修改应用文件时，WDS能做到实时重载。但是，在修改webpack的配置文件webpack.config.js后，还需要重启服务才能看到效果。这是因为WDS是一个Node.js的服务器。如果频繁修改webpack.config.js，会觉得重启服务太麻烦。可以使用[nodemon](https://github.com/remy/nodemon)来优化。
+``nodemon``能够监测node.js文件的变动，自动重启服务。对于开发node应用很方便。使用``nodemon``来监测webpack.config.js的改动，可以在npm脚本中配置如下。
+```
+"scripts" : {
+    "start" : "nodemon --watch webpack.config.js --exec \"webpack-dev-server\""
+}
+```
+
+#### 了解
+1. 在某些老旧的系统上，可能webpack无法做到监测文件的变动。可以通过设置``devServer.polling``，设置轮询的时间间隔，作为替代方案。
+
 ### webpack-dev-middleware
 webpack-dev-middleware是内置在webpack-dev-server中的，用于和服务器交互的中间件。可以单独拎出来，与自己搭建的服务器配合，进行更多灵活的自定义的配置。
 

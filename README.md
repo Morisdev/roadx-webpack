@@ -6,8 +6,7 @@ This Repo records my learning process of Webpack.
 From basic usage to deep understanding, every step will be logged here.
 
 ## Task
-### 201808
-#### Official Guide 
+### Official Guide 
 + ~~Output~~
 + Asset
 + ~~Dev~~
@@ -15,9 +14,20 @@ From basic usage to deep understanding, every step will be logged here.
 + ~~Tree Shaking~~
 + ~~Production~~
 + ~~Code Splitting~~
-+ Build Performance
-+ Lazy Loading
-+ Caching 
+
+### Survivejs Book
++ ~~Developing~~
++ Styling
++ Assets
++ Building
++ Optimizing
++ Output
++ Techniques
++ Extending
++ Appendices
+
+## Analysis
++ mini-html-webpack-plugin
 
 ## References
 + [webpack.js.org](https://webpack.js.org/)
