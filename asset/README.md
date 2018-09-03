@@ -41,4 +41,25 @@ img.src = BadgeImage; // Image URL
 document.body.appendChild(img);
 ```
 
+## Fonts
+通过``file-loader``，webpack也能处理font文件。配置loader规则如下。
+```
+module : {
+    rules : [
+        {
+            test : /\.(woff|woff2|eot|ttf|otf)$/,
+            use : ['file-loader']
+        }
+    ]
+}
+```
+配置后，通过``@font-face``声明字体，webpack便可将该字体包含到bundle中。
+
+## Data
+在应用中，有时候会需要引入一些数据文件。比如JSON数据、XML文档，或者CSV文件等。在webpack中内置对JSON文件的支持。所以，引入JSON文件很简单。
+```
+import Data from './data.json';
+```
+不过，引入XML文档需要``xml-loader``，引入CSV文件需要``csv-loader``。  
+引入数据文件对于使用D3等来实现可视化很有帮助，因为不必再通过ajax请求数据后，再渲染图形。而是在bundle过程中就已经获取到了数据。
 
